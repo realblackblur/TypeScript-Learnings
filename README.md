@@ -12,21 +12,21 @@ A structured repository documenting my journey learning TypeScript from fundamen
 
 ## Topics
 
-* TypeScript fundamentals
-* Basic types and type inference
-* Arrays and objects
-* Union and intersection types
-* `unknown` vs `any`
-* Functions
-* Type aliases
-* Interfaces
-* Narrowing and type guards
-* Generics
-* Utility types
-* Modules
-* Classes
-* Advanced TypeScript patterns
-* Real-world project
+* Basic types & inference
+* Functions — param/return types, optional/default params, overloads void vs never
+* Interfaces vs type aliases (and when to use which — asked constantly in interviews)
+* Unions, intersections, literal types, discriminated unions
+* Tuples, enums, arrays in depth
+* Object types — readonly, optional props, index signatures
+* Classes in TS — access modifiers, abstract classes, implements
+* Generics — functions, classes, constraints
+* Utility types — Partial, Pick, Omit, Record, Readonly, etc.
+* Type narrowing & guards — typeof, instanceof, in, custom predicates
+* Advanced types (light touch) — mapped types, conditional types, template literals
+* Modules, .d.ts declaration files, using untyped JS libraries
+* tsconfig.json deep dive — what strict actually turns on
+* Typing async code — Promises, Fetch responses, error typing
+* Capstone — Todo App v2 (TypeScript)
 
 ## Learning Method
 
