@@ -1,3 +1,4 @@
+//Project: Notification Type System
 interface BaseNotification {
   message: string;
   recipient: string;

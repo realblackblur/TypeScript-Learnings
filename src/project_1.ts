@@ -1,3 +1,4 @@
+//Project: Safe User Input Parser
 type User = { id: number; name: string; age: number };
 
 const parseUser = (raw: unknown): User => {
