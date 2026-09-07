@@ -13,7 +13,7 @@ const customSettings = {
 };
 function describeSettings(settings) {
     const knownKeys = ["id", "username", "bio"];
-    const customKeys = Object.keys(settings).filter((banana) => !knownKeys.includes(banana));
+    const customKeys = Object.keys(settings).filter((key) => !knownKeys.includes(key));
     return `Username: ${settings.username}, Custom preferences: ${customKeys.length}`;
 }
 console.log(describeSettings(basicSettings));
