@@ -25,7 +25,7 @@ class Book {
       return;
     }
     this.checkedOut = false;
-    console.log(`${this.title} not checked out.`)
+    console.log(`${this.title} has been returned.`)
   }
 
   public isCheckedOut (): boolean {
