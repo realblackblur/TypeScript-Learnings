@@ -53,4 +53,20 @@ Mindset.returnBook();
 AtomicHabits.download();
 console.log(Mindset.isCheckedOut());
 console.log(AtomicHabits.isCheckedOut());
+//Abstract Classes
+class Shape {
+}
+class Rectangle extends Shape {
+    width;
+    height;
+    constructor(width, height) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
+    area() {
+        return this.width * this.height;
+    }
+}
+const area51 = new Rectangle(10, 3);
 //# sourceMappingURL=project_7.js.map
