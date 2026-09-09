@@ -1,30 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function describePayment(payment) {
-    if (payment.status === "success") {
-        return `Success: $${payment.amount}, ID: ${payment.transactionId}`;
-    }
-    else if (payment.status === "pending") {
-        return `Pending: $${payment.amount}`;
-    }
-    else {
-        return `Failed: $${payment.amount}, Reason: ${payment.reason}`;
-    }
+function updateUser(id, changes) {
+    console.log(`Updating user ${id} with:`, changes);
 }
-const Subham = {
-    status: "success",
-    amount: 5000,
-    transactionId: "AD2F28340",
+const userPreview = {
+    id: 1,
+    name: "Subham X",
 };
-const payment1 = {
-    success: true,
-    data: Subham
+const users = {
+    1: {
+        id: 1,
+        name: "Ritika",
+        age: 20,
+    },
+    2: {
+        id: 2,
+        name: "Subham",
+        age: 20,
+    },
 };
-const payment2 = {
-    success: false,
-    data: [],
-    error: "Payment Failed"
-};
-console.log(payment1);
-console.log(payment2);
+updateUser(1, {
+    name: "Ritika Hodges",
+});
+updateUser(2, {
+    age: 21,
+});
+console.log(userPreview);
+console.log(users);
 //# sourceMappingURL=project_8.js.map
