@@ -1,3 +1,4 @@
+//Project: User Profile System
 type User = {
   id: number;
   name: string;
