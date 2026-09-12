@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //Project: Shape Renderer
 //Part A
 class Circle {
@@ -41,4 +39,5 @@ const circlePlain = { radius: 10 };
 const squarePlain = { side: 15 };
 console.log(renderPlain(circlePlain));
 console.log(renderPlain(squarePlain));
+export {};
 //# sourceMappingURL=project_9.js.map

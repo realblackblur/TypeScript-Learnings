@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Project: Order Scheduler
 var Priority;
 (function (Priority) {
@@ -13,4 +11,5 @@ const describeOrder = (priority, window) => {
 };
 console.log(describeOrder(Priority.High, [9, 12]));
 console.log(describeOrder(Priority.Urgent, [14, 18]));
+export {};
 //# sourceMappingURL=project_4.js.map

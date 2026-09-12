@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //-----------------------Basic Types & Inference--------------------------------
 let status = "pending";
 status = "active";
@@ -109,4 +107,5 @@ const payment2 = {
 };
 console.log(payment1);
 console.log(payment2);
+export {};
 //# sourceMappingURL=project_0.js.map

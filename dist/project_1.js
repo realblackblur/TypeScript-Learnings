@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const parseUser = (raw) => {
     // Step 1: is it an object at all?
     if (typeof raw !== "object" || raw === null) {
@@ -39,4 +37,5 @@ for (const raw of [raw1, raw2, raw3, raw4]) {
         console.log("Rejected:", err.message);
     }
 }
+export {};
 //# sourceMappingURL=project_1.js.map

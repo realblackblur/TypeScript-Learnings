@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Project: Library Book class
 class Book {
     title;
@@ -38,6 +36,7 @@ Mindset.returnBook();
 AtomicHabits.returnBook();
 console.log(Mindset.isCheckedOut());
 console.log(AtomicHabits.isCheckedOut());
+export {};
 // Output:
 // Mindset checked out.
 // Already checked out.
