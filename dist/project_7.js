@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Project: Book => E-Book
 class Book {
     title;
@@ -69,4 +67,5 @@ class Rectangle extends Shape {
     }
 }
 const area51 = new Rectangle(10, 3);
+export {};
 //# sourceMappingURL=project_7.js.map

@@ -42,4 +42,4 @@ Projects and exercises will be added as I progress through the roadmap.
 
 **Phase 2 — TypeScript**
 
-Status: In Progress
+Status: Completed

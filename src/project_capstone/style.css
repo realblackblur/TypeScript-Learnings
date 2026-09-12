@@ -1,0 +1,446 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT COLORS
+========================= */
+
+:root {
+  --bg: #09090b;
+  --surface: rgba(24, 24, 27, 0.75);
+  --surface-hover: #27272a;
+
+  --border: #3f3f46;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+
+  --danger: #ef4444;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 100px 20px;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at top,
+      #1e1b4b 0%,
+      #09090b 45%
+    );
+
+  overflow-x: hidden;
+
+  animation: pageEnter 0.8s ease-out;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+  margin-bottom: 35px;
+
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #a78bfa,
+    #ffffff
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation:
+    titleEnter 0.8s ease-out,
+    gradientMove 5s linear infinite;
+}
+
+/* =========================
+   FORM
+========================= */
+
+#todoForm {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  gap: 12px;
+
+  padding: 12px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4);
+
+  animation: formEnter 0.9s ease-out;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+#todoInput {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 16px 18px;
+
+  font-size: 1rem;
+
+  color: var(--text);
+
+  background: #18181b;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+#todoInput::placeholder {
+  color: var(--text-muted);
+}
+
+#todoInput:focus {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.15);
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+button {
+  position: relative;
+
+  padding: 16px 24px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #6366f1
+  );
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Light sweep effect */
+
+button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+
+  transition: left 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(139, 92, 246, 0.35);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   TODO LIST
+========================= */
+
+#todoList {
+  width: 100%;
+  max-width: 600px;
+
+  margin-top: 25px;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================
+   TODO ITEM
+========================= */
+
+#todoList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  color: var(--text);
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2);
+
+  animation: todoEnter 0.4s ease-out;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover animation */
+
+#todoList li:hover {
+  transform: translateY(-4px);
+
+  background: var(--surface-hover);
+
+  border-color: #71717a;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   COMPLETED TODO
+========================= */
+
+.completed {
+  position: relative;
+
+  color: var(--text-muted);
+
+  text-decoration: line-through;
+
+  opacity: 0.6;
+
+  animation: completeTask 0.4s ease;
+}
+
+/* =========================
+   OPTIONAL DELETE BUTTON
+   (if your JS creates one)
+========================= */
+
+.delete-btn {
+  padding: 8px 12px;
+
+  color: white;
+
+  background: transparent;
+
+  border: 1px solid #7f1d1d;
+
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background: var(--danger);
+
+  border-color: var(--danger);
+
+  box-shadow:
+    0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+/* =========================
+   PAGE ANIMATIONS
+========================= */
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes titleEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes formEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* New todo animation */
+
+@keyframes todoEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Completed animation */
+
+@keyframes completeTask {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animated gradient */
+
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 60px 15px;
+  }
+
+  #todoForm {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

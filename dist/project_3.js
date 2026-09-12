@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function describePayment(payment) {
     if (payment.status === "success") {
         return `Success: $${payment.amount}, ID: ${payment.transactionId}`;
@@ -28,4 +26,5 @@ const Halwi = {
 for (const payment of [Subham, Ritika, Halwi]) {
     console.log(describePayment(payment));
 }
+export {};
 //# sourceMappingURL=project_3.js.map

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const basicSettings = {
     id: 1,
     username: "blur",
@@ -18,4 +16,5 @@ function describeSettings(settings) {
 }
 console.log(describeSettings(basicSettings));
 console.log(describeSettings(customSettings));
+export {};
 //# sourceMappingURL=project_5.js.map

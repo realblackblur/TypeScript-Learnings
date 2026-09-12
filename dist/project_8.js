@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function updateUser(id, changes) {
     console.log(`Updating user ${id} with:`, changes);
 }
@@ -27,4 +25,5 @@ updateUser(2, {
 });
 console.log(userPreview);
 console.log(users);
+export {};
 //# sourceMappingURL=project_8.js.map
